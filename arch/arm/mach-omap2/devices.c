@@ -577,6 +577,12 @@ static struct resource omap3_pmu_resource = {
 	.flags	= IORESOURCE_IRQ,
 };
 
+static struct resource omap446x_pmu_resource = {
+	.start	= 86,
+	.end	= 87,
+	.flags	= IORESOURCE_IRQ,
+};
+
 static struct platform_device omap_pmu_device = {
 	.name		= "arm-pmu",
 	.id		= ARM_PMU_DEVICE_CPU,
@@ -589,6 +595,8 @@ static void omap_init_pmu(void)
 		omap_pmu_device.resource = &omap2_pmu_resource;
 	else if (cpu_is_omap34xx())
 		omap_pmu_device.resource = &omap3_pmu_resource;
+	else if (cpu_is_omap446x())
+		omap_pmu_device.resource = &omap446x_pmu_resource;
 	else
 		return;
 
