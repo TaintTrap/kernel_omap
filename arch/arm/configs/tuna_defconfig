@@ -1,3 +1,30 @@
+# for perf_events:
+CONFIG_PERF_EVENTS=y
+# for stack traces:
+CONFIG_FRAME_POINTER=y
+# kernel symbols:
+CONFIG_KALLSYMS=y
+# tracepoints:
+CONFIG_TRACEPOINTS=y
+# kernel function trace:
+CONFIG_FTRACE=y
+# kernel-level dynamic tracing:
+CONFIG_KPROBES=y
+CONFIG_KPROBE_EVENTS=y
+# user-level dynamic tracing:
+CONFIG_UPROBES=y
+CONFIG_UPROBE_EVENTS=y
+# full kernel debug info:
+CONFIG_DEBUG_INFO=y
+# kernel lock tracing:
+CONFIG_LOCKDEP=y
+# kernel lock tracing:
+CONFIG_LOCK_STAT=y
+# kernel dynamic tracepoint variables:
+CONFIG_DEBUG_INFO=y
+# create /proc/config.gz
+CONFIG_IKCONFIG=y
+CONFIG_IKCONFIG_PROC=y
 CONFIG_EXPERIMENTAL=y
 # CONFIG_SWAP is not set
 CONFIG_SYSVIPC=y
@@ -403,7 +430,7 @@ CONFIG_ANDROID_LOW_MEMORY_KILLER=y
 CONFIG_OMAP_HSI=y
 CONFIG_EXT2_FS=y
 CONFIG_EXT4_FS=y
-# CONFIG_EXT4_FS_XATTR is not set
+CONFIG_EXT4_FS_XATTR=y
 # CONFIG_DNOTIFY is not set
 CONFIG_FUSE_FS=y
 CONFIG_MSDOS_FS=y
